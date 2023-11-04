@@ -12,7 +12,7 @@
     
     --teal-primary: #004743;
     --teal-secondary: #006F68;
-    --text-dark: #333;
+    --text-dark: black;
     --text-light: #fff;
     --dark-bg: #030027;
     --light-bg: #f2f3d9;
@@ -22,8 +22,8 @@
 }
 
 body {    
-    color: var(--text-light);
-    background-color: var(--teal-primary);
+    color: var(--text-dark);
+    background-color: var(--light-bg);
     position: relative;
     overflow-x: hidden;
     /* text-shadow: var(--dark-bg) 3px 3px; */
@@ -32,7 +32,7 @@ body {
 
 a {
     text-decoration: none;
-    color: #fff;
+    color: var(--text-dark);
 }
 
 img {
@@ -50,14 +50,18 @@ h1 {
     font-size: 3.9rem;
     line-height: 4.1rem;
     margin-bottom: 2.5rem;
-    text-shadow: var(--dark-bg) 5px 5px;
+    text-shadow: var(--light-bg) 5px 5px;
+    color: black;
+    font-weight: bold;
    
 }
 
 h4 {
     font-size: 1.2rem;
-    color: var(--accent-primary);
+    color: var(--text-dark);
+    text-shadow: var(--light-bg) 1px 1px;
     margin-bottom: 1.5rem;
+    font-weight: bold;
 }
 
 .container {
@@ -84,7 +88,7 @@ h4 {
     background-color: var(--dark-bg);
     color: var(--text-light);
     text-decoration: none;
-    border-right: 3px var(--light-bg) solid;
+    border-right: 5px var(--light-bg) solid;
     
 }
 
@@ -92,8 +96,21 @@ h4 {
     background: linear-gradient(to right, var(--teal-secondary), var(--light-bg));
     color: var(--text-dark);
     text-decoration: none;
-    border-right: 3px var(--dark-bg) solid;
+    border-right: 5px var(--dark-bg) solid;
     font-weight: bold;
+}
+
+.btn-second {
+    background-color: var(--teal-secondary);
+    color: var(--text-light);
+    border-right: 5px var(--teal-primary) solid;
+   
+}
+
+.btn-second:hover {
+    background: linear-gradient(to right, var(--dark-bg), var(--teal-primary));
+    border-right: 5px var(--light-bg) solid;
+    color: var(--text-light)
 }
 
 section{
@@ -111,7 +128,7 @@ section{
 
 
 p{
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 
@@ -194,6 +211,8 @@ p{
     transition: all 0.5s ease-out;  
     z-index: 3;
     padding: 0;
+    
+
 
         
 }
@@ -209,6 +228,7 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+
   
      
 }
@@ -217,10 +237,12 @@ p{
     padding: 10px 15px;
     margin: 0 20px;
     transition: hover 0.1s ease-in;
+ 
+
 }
 
 .navbar a:hover {
-    border-bottom: 2px solid var(--light-bg);
+    border-bottom: 2px solid var(--teal-primary);
       
 }
 
@@ -229,7 +251,7 @@ p{
     border-radius: 50%;
     width: 55px;
     min-width: 50px;   
-    border: 2px var(--dark-bg) solid;
+    border: 2px var(--teal-secondary) solid;
 }
 
 #hamburger {
@@ -271,12 +293,12 @@ p{
 
 /* Hero section */
 #main #hero {
-    background: url('./public/images/hero.svg') no-repeat center center/cover;
+    background: url('./public/images/stacked-steps-haikei.svg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    
     position: relative;
+    border-bottom: var(--dark-bg) 10px solid;
 }
 
 
@@ -331,6 +353,7 @@ p{
     background: url('./public/images/about.svg') no-repeat center center/cover;
     padding-top: 5rem;
     clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
+  
 }
 
 
@@ -360,9 +383,11 @@ p{
 #main #about .container .left video {
     width: 100%;
     height: 100%;
+    max-height: 350px;
     object-fit: cover;
-    border: 5px var(--teal-secondary) solid;
+    border: 5px var(--teal-primary) solid;
     border-radius: 1rem;
+   
 }
 
 
@@ -387,6 +412,7 @@ p{
 #main #brand h1 {
     margin-bottom: 0.5rem;
     color: var(--text-light);
+    text-shadow: var(--teal-secondary) 5px 5px;
 }
 
 #main #brand .container{
@@ -408,8 +434,11 @@ p{
 #main #brand .container .scroller__inner.second .card {
     background-color: rgba(242, 243, 217, 0.75);
 }
+
 #main #brand .container img {
     width: 175px;
+    object-fit: fill;
+    border: #006F68 2px solid;
 }
 
 #main #brand .container .card-img {
@@ -417,7 +446,7 @@ p{
     object-fit: cover;
     object-position: center center;
     border-radius: 50%;
-    border: var(--accent-primary) 3px solid;
+    border: var(--teal-secondary) 3px solid;
 }
 
 #main #brand .container .second {
