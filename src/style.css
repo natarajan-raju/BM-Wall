@@ -9,30 +9,36 @@
 }
 
 :root{
-    --green-primary: #c0d684;
-    --green-secondary: #cbeaa6;
-    --green-light: #f3f9d2;
-    --accent-primary: #3d0b37;
-    --accent-secondary: #63264a;
+    
+    --teal-primary: #004743;
+    --teal-secondary: #006F68;
+    --text-dark: #333;
+    --text-light: #fff;
+    --dark-bg: #030027;
+    --light-bg: #f2f3d9;
+    --color-bg: rgb(193, 110, 112);
     
 
 }
 
 body {    
-    color: var(--accent-primary);
-    background-color: var(--green-light);
+    color: var(--text-light);
+    background-color: var(--teal-primary);
     position: relative;
     overflow-x: hidden;
-    
+    /* text-shadow: var(--dark-bg) 3px 3px; */
+   
 }
 
 a {
     text-decoration: none;
-    color: var(--accent-primary);
+    color: #fff;
 }
 
 img {
     width: 100%;
+    object-fit: cover;
+    
 }
 
 li {
@@ -44,12 +50,13 @@ h1 {
     font-size: 3.9rem;
     line-height: 4.1rem;
     margin-bottom: 2.5rem;
-    
+    text-shadow: var(--dark-bg) 5px 5px;
+   
 }
 
 h4 {
     font-size: 1.2rem;
-    color: var(--accent-secondary);
+    color: var(--accent-primary);
     margin-bottom: 1.5rem;
 }
 
@@ -63,32 +70,38 @@ h4 {
 }
 
 .btn {
-    border: none;
+    border: none;   
     cursor: pointer;
     padding: 15px 10px;
     width: 75%;
     border-radius: 5px;
     transition: all 0.5s ease;
     font-size: medium;
+    text-shadow: none;
 }
 
 .btn-prime {   
-    background-color: var(--accent-primary);
-    color: var(--green-light);
+    background-color: var(--dark-bg);
+    color: var(--text-light);
     text-decoration: none;
+    border-right: 3px var(--light-bg) solid;
     
 }
 
 .btn-prime:hover {
-    background-color: var(--accent-secondary);
-    color: white;
+    background: linear-gradient(to right, var(--teal-secondary), var(--light-bg));
+    color: var(--text-dark);
     text-decoration: none;
+    border-right: 3px var(--dark-bg) solid;
+    font-weight: bold;
 }
 
 section{
     padding: 2rem 1.5rem;
     width: 100vw;
     height: 100vh;
+    min-height: 100vh;
+    transition: all 0.5s ease;
 }
 
 .mobile-svg {
@@ -106,6 +119,7 @@ p{
 .scroller {
     /* width: 100%; */
     max-width: 756px;
+    text-shadow: none;
     
   }
   
@@ -173,11 +187,11 @@ p{
 .navbar {
     font-weight: bold;
     overflow: hidden;
-    background-color: rgba(0,0,0,0);    
+    /* background-color: rgba(0,0,0,0);     */
     width: 100%;
     position: fixed;
     top: 0;
-    transition: all 0.7s ease-out;  
+    transition: all 0.5s ease-out;  
     z-index: 3;
     padding: 0;
 
@@ -202,10 +216,12 @@ p{
 .navbar a {
     padding: 10px 15px;
     margin: 0 20px;
+    transition: hover 0.1s ease-in;
 }
 
 .navbar a:hover {
-    border-bottom: 2px solid var(--accent-primary);   
+    border-bottom: 2px solid var(--light-bg);
+      
 }
 
 
@@ -213,6 +229,7 @@ p{
     border-radius: 50%;
     width: 55px;
     min-width: 50px;   
+    border: 2px var(--dark-bg) solid;
 }
 
 #hamburger {
@@ -237,119 +254,90 @@ p{
 }
 
 .scrolled {
-    background-image: linear-gradient(to right, #3d0b37, #46123c, #501841, #591f45, #63264a);
-    opacity: 0.85;    
-    border-bottom: 3px var(--green-primary) solid; 
+    background-color: var(--dark-bg);
+    opacity: 0.90;    
+    border-bottom: 3px var(--light-bg) solid; 
 }
 
 .scrolled a {
-    color: var(--green-light);
+    color: #fff;
 }
 
 .scrolled a:hover{
-    border-bottom: 2px solid var(--green-secondary);
+    border-bottom: 2px solid #ccc;
 }
 
 
 
 /* Hero section */
 #main #hero {
-    background: url('./public/images/stacked-steps-haikei.svg') no-repeat center center/cover;
+    background: url('./public/images/hero.svg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
+    
+    position: relative;
 }
+
 
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+ 
 }
 
-.hero-container .svg {
-    position: absolute;
-    align-self: center;
-    left: 50%;
-    width: 50%;
-    z-index: 1;
-    opacity: 70%;
-    
+
+
+.hero{
+    padding: 3px;
 }
-.hero {
-    padding: 2rem;
-    width: 50%;
+
+
+
+.hero-container .image-container {
+    display: flex;
+    width: 90%;
+    height: 100%;     
 }
+
+
 
 .hero-text {
     padding: 1rem;
     text-align: left;
+    z-index: 1;
+}
+
+#hero .carousel-inner {
+    /* border: 5px var(--dark-bg) solid; */
+       
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.carousel-inner img {
+    border: 5px var(--dark-bg) solid;
+    border-radius: 0.75rem;
+
 }
 
 
-.hero-cards {    
-    align-self: flex-end;  
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0.5rem;
-    grid-auto-flow: row;
-    grid-template-areas:
-    "Image1 Image2 Image3"
-    "Image1 Image2 Image3";
-    /* ". Image2 ."; */
-    padding: 1rem;  
-    width: 45%;
-    min-width: 40%;
-    height: 75%; 
-    z-index: 2;
-  }
-
-  .hero-cards .card {
-    
-    box-shadow: 0 4px 8px 0 rgba(99, 38, 74, 0.5);
-    transition: all 0.3s ease;
-    border-radius: 10px;
-    height: 50%;
-    border: var(--green-primary) 1px solid;
-}
-
-.hero-cards .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(99,38,74,1);    
-    transform: scale(1.01);
-}
-  
-#main .hero-container .hero-cards .Image1 { 
-    grid-area: Image1;
-    background: url('./public/images/img1.jpg') no-repeat center center/cover;    
-    align-self: flex-start;
-   
- }
-
- #main .hero-container .hero-cards .Image3 { 
-    grid-area: Image3;
-    background: url('./public/images/img3.jpg') no-repeat center center/cover;
-    align-self: start;
-}
-  
-  
- #main .hero-container .hero-cards .Image2 { 
-    grid-area: Image2; 
-    background: url('./public/images/img2.jpg') no-repeat center center/cover;  
-    justify-self: stretch;
-    align-self: center;
-
-}
 
 /* About  */
 
 #main #about {
     background: url('./public/images/about.svg') no-repeat center center/cover;
     padding-top: 5rem;
+    clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
 }
 
+
+
 #main #about h1 {
-    color: var(--green-primary);
+    color: var(--teal-primary);
+    text-shadow: var(--text-light) 3px 3px;
 }
 
 #main #about .container {
@@ -357,7 +345,8 @@ p{
     align-items: center;
     justify-content: center;
     text-align: left;
-    color: var(--green-light);
+    color: var(--text-dark);
+    font-weight: 900;
     
 }
 
@@ -368,12 +357,11 @@ p{
 }
 
 
-
 #main #about .container .left video {
     width: 100%;
-    height: 65%;
+    height: 100%;
     object-fit: cover;
-    border: 2px var(--green-primary) solid;
+    border: 5px var(--teal-secondary) solid;
     border-radius: 1rem;
 }
 
@@ -385,73 +373,20 @@ p{
     justify-content: center;
 }
 
-/* Services */
-#services {
-    background: url('./public/images/service.svg') no-repeat center center/cover;    
-    clip-path: polygon(0 0,100% 0,100% calc(100% - 50px),50% 100%,0 calc(100% - 50px));
-}
-
-#services * {
-    border-radius: 1rem;
-}
-#services .container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-    
-    
-   
-}
-#services .image-container {
-    max-width: 60%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    border: var(--accent-secondary) 1px solid;
-   
-}
-
-#services .image-container::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(99, 38, 74, 0.25);
-    z-index: 2;
-    border-radius: 1rem;   
-    
-}
-
-
-#services button {
-    background-color: rgba(99, 38, 74, 0.5);
-    z-index: 3;
-   
-}
-
-#services .mobile-svg img {
-    max-width: 20%;
-
-}
 
 /* Brand */
 
 
 #main #brand {
     background: url('./public/images/brand.svg') no-repeat center center/cover;
-    color: var(--green-primary);
+    color: var(--text-dark);
     clip-path: polygon(0 0,50% 50px,100% 0,100% 100%,0 100%);
     margin-top: -40px;
 }
 
 #main #brand h1 {
     margin-bottom: 0.5rem;
+    color: var(--text-light);
 }
 
 #main #brand .container{
@@ -471,7 +406,7 @@ p{
     background-color: rgba(0,0,0,0);
 }
 #main #brand .container .scroller__inner.second .card {
-    background-color: rgba(243, 249, 210, 0.65);
+    background-color: rgba(242, 243, 217, 0.75);
 }
 #main #brand .container img {
     width: 175px;

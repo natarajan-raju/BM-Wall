@@ -17,11 +17,12 @@ section {
     padding: 0.75rem;
 }
 
+
 /* //Navbar */
 
 .navbar {
-    background-image: linear-gradient(to right, #3d0b37, #46123c, #501841, #591f45, #63264a);
-    opacity: 0.85;    
+    background-color: var(--dark-bg);
+    opacity: 0.90;    
     border-bottom: 3px var(--green-primary) solid; 
 }
 
@@ -34,8 +35,11 @@ section {
 
 .navbar .nav-list {
     display: none;
-    flex-direction: column;    
+    flex-direction: column;  
+    justify-content: center;  
     width: 100%;
+    margin: 0;
+    padding: 2px;
 }
 
 .navbar .nav-list .nav-item {
@@ -43,7 +47,7 @@ section {
     text-align: center;
     margin: 15px 0;
     padding: 5px;
-    border-bottom: 2px solid var(--green-primary);
+    border-bottom: 2px solid var(--light-bg);
 }
 
 .navbar a{
@@ -55,12 +59,12 @@ section {
 }
 
 .container #hamburger {
-    border-color: var(--green-secondary);
+    border: 1px var(--light-bg) solid;
     display: flex;
 }
 
 .container #hamburger .bar{
-    background-color: var(--green-secondary);
+    background-color: var(--light-bg);
 }
 
 .mobile-svg {
@@ -96,23 +100,16 @@ section {
     justify-content: center;
 }
 
-#main #hero .hero-container .svg {
-    display: none;
-}
 
-#main #hero .mobile-svg {
-    width: 60%;
-}
 
 .hero {
     height: 50%;
 
 }
 
-.hero-cards {
-    display: none;
+.hero-container .image-container {
+    width: 100%;
 }
-
 /* About */
 
 #main #about {
@@ -135,7 +132,7 @@ section {
 }
 
 #main #about .container .about p {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
 }
 
 /* services */
@@ -144,6 +141,6 @@ section {
     justify-content: space-evenly;
 }
 #services .image-container {
-    max-width: 90%;
+    max-width: 100%;
 }
 
