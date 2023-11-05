@@ -53,7 +53,7 @@ h1 {
     text-shadow: var(--light-bg) 5px 5px;
     color: black;
     font-weight: bold;
-   
+       
 }
 
 h4 {
@@ -116,7 +116,6 @@ h4 {
 section{
     padding: 2rem 1.5rem;
     width: 100vw;
-    height: 100vh;
     min-height: 100vh;
     transition: all 0.5s ease;
 }
@@ -128,14 +127,15 @@ section{
 
 
 p{
-    font-size: 0.85rem;
+    font-size: 1rem;
+    text-align: justify;
 }
 
 
 
 .scroller {
     /* width: 100%; */
-    max-width: 756px;
+    max-width: 910px;
     text-shadow: none;
     
   }
@@ -277,7 +277,8 @@ p{
 
 .scrolled {
     background-color: var(--dark-bg);
-    opacity: 0.90;    
+    background: linear-gradient(45deg, var(--light-bg),var(--dark-bg),var(--teal-primary),var(--teal-secondary));
+    opacity: 0.80;    
     border-bottom: 3px var(--light-bg) solid; 
 }
 
@@ -306,14 +307,11 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
  
 }
 
 
-
-.hero{
-    padding: 3px;
-}
 
 
 
@@ -376,7 +374,7 @@ p{
 #main #about .container .about {
     width: 50%;
     height: 100%;
-    padding: 2rem;       
+    padding: 1.5rem;       
 }
 
 
@@ -407,6 +405,7 @@ p{
     color: var(--text-dark);
     clip-path: polygon(0 0,50% 50px,100% 0,100% 100%,0 100%);
     margin-top: -40px;
+    border-bottom: 10px var(--teal-secondary) solid;
 }
 
 #main #brand h1 {
@@ -453,3 +452,86 @@ p{
     font-size: small;
     font-weight: bold;
 }
+
+/* Footer */
+
+.footer {
+    background: linear-gradient(45deg, var(--light-bg),var(--dark-bg),var(--teal-primary),var(--teal-secondary));
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+
+.footer .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    /* justify-content: center; */
+}
+
+.footer .social-container {
+    height: 3rem;
+    border-bottom: var(--teal-secondary) 3px solid;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 3rem;
+}
+
+.footer .social-container i{
+    margin: 0 2rem;
+}
+
+.footer .social-container i:hover {
+    
+    opacity: 0.5;    
+    transition: all 0.5s ease;
+}
+
+
+.footer .footer-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    justify-content: space-around;    
+    overflow: hidden;
+    padding: 2rem 1rem;
+}
+
+
+
+
+.footer-container .footer-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 2px var(--teal-secondary) dashed;
+    align-items: center ;
+    margin-right: 1rem;
+    
+}
+
+
+.footer-container .footer-logo {
+    background-color: #fff;
+    border-radius: 50%;
+    border: var(--teal-primary) 3px solid;
+}
+
+.footer-container .footer-logo img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    object-fit: contain;
+   
+}
+
+.footer-item i {
+    padding: 0.75rem;
+    text-shadow: var(--dark-bg) 1px 1px;
+    font-size: 1rem;
+
+}
+
