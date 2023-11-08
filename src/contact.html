@@ -16,23 +16,23 @@
         <div class="contact-container">
             <div class="contact contact-left"></div>
             <div class="contact contact-right">
-                    <form name="contact" netlify>                    
-                    <div class="form-group">
+                    <form name="contact" method="post" data-netlify="true" netlify>                  
+                    <div class="form-group"> 
                         <label for="inputName">Name</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Enter your name">
+                        <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Enter your name">
                     </div>
                     <div class="form-group">
                         <label for="inputNumber">Phone number</label>
-                        <input type="number" class="form-control" id="inputNumber" placeholder="Enter your Phone number">
+                        <input type="number" class="form-control" id="inputNumber" name="inputNumber" placeholder="Enter your Phone number">
                     </div>
                     <div class="form-group">
                       <label for="inputEmail">Email address</label>
-                      <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                      <input type="email" class="form-control" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" placeholder="Enter email">
                       <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
                     <div class="form-group">
                         <label for="formSelect">Services Interested</label>
-                        <select multiple class="form-control" id="formSelect">
+                        <select multiple class="form-control" id="formSelect" name="formSelect">
                           <option>Structural glazing</option>
                           <option>Patch fitting doors</option>
                           <option>Automatic sensor doors</option>
