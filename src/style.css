@@ -16,9 +16,14 @@
     --text-light: #fff;
     --dark-bg: #030027;
     --light-bg: #f2f3d9;
-    --color-bg: rgb(193, 110, 112);
-    
+    --color-bg: rgb(193, 110, 112);   
 
+}
+
+
+::selection {
+    background-color: var(--teal-secondary);
+    color: var(--text-dark);
 }
 
 body {    
@@ -82,6 +87,7 @@ h4 {
     transition: all 0.5s ease;
     font-size: medium;
     text-shadow: none;
+    margin-top: 1rem;
 }
 
 .btn-prime {   
@@ -113,6 +119,18 @@ h4 {
     color: var(--text-light)
 }
 
+.btn-lite {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    border-right: 5px var(--teal-secondary) solid;
+}
+
+.btn-lite:hover {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    border-color: var(--light-bg);
+}
+
 section{
     padding: 2rem 1.5rem;
     width: 100vw;
@@ -129,6 +147,13 @@ section{
 p{
     font-size: 1rem;
     text-align: justify;
+}
+
+label {
+    color: var(--text-light);
+    font-weight: bolder;
+    text-shadow: var(--dark-bg) 2px 2px;
+    margin-bottom: 2px;
 }
 
 
@@ -196,6 +221,11 @@ p{
     padding: 3px;
 
 }  
+
+.form-control:focus{
+    border-color: var(--teal-primary);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 1rem rgba(0, 111, 104, 0.6);
+}
 
 
 
@@ -405,7 +435,10 @@ p{
     color: var(--text-dark);
     clip-path: polygon(0 0,50% 50px,100% 0,100% 100%,0 100%);
     margin-top: -40px;
-    border-bottom: 10px var(--teal-secondary) solid;
+    border-bottom: 10px var(--dark-bg) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #main #brand h1 {
@@ -416,7 +449,7 @@ p{
 
 #main #brand .container{
   display: grid;
-  padding-top: 5rem;
+  padding-top: 1.5rem;
   /* min-block-size: 50vh; */
   place-content: center;
   gap: 1.5rem;
@@ -453,6 +486,11 @@ p{
     font-weight: bold;
 }
 
+#main #brand .container .btn {
+    width: 50%;
+    justify-self: center;
+}
+
 /* Footer */
 
 .footer {
@@ -477,15 +515,26 @@ p{
     align-items: center;
     justify-content: space-around;
     padding: 3rem;
+ 
 }
+
 
 .footer .social-container i{
     margin: 0 2rem;
+   
+    
 }
+
+.fa-facebook{
+    border-radius: 50%;
+    background-color: white; 
+}
+
+
 
 .footer .social-container i:hover {
     
-    opacity: 0.5;    
+    opacity: 0.9;    
     transition: all 0.5s ease;
 }
 
@@ -534,4 +583,72 @@ p{
     font-size: 1rem;
 
 }
+
+/* Contact */
+#contact {
+    padding: 0;
+    border-bottom: 10px var(--teal-secondary) solid;
+}
+
+#contact .contact-container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    
+}
+
+#contact .contact-container h1 {
+    color: var(--text-light);
+    text-shadow: var(--dark-bg) 3px 3px;    
+}
+
+#contact .contact-container .btn{
+    width: 100%;
+}
+
+#contact .contact-container .contact {    
+    min-height: 100vh;
+    width:50%;
+    
+}
+
+#contact .contact-container .contact-left{
+    background: url('./public/images/contact_us.jpg') center center/cover; 
+    
+
+}
+
+#contact .contact-container .contact-right {
+    
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('./public/images/contact.svg') center center/cover;
+
+
+}
+
+#contact .contact-container .contact-right form {
+    background-color: rgba(242, 243, 217, 0.30);   
+    min-width: 75%;   
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+
+}
+
+#contact .contact-container .contact-right form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-navbar a {
+    color: var(--text-light);
+}
+
+.contact-navbar a:hover {
+    border-color: var(--text-light);
+}
+
+
 
