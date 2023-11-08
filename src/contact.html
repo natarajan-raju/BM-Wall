@@ -16,7 +16,7 @@
         <div class="contact-container">
             <div class="contact contact-left"></div>
             <div class="contact contact-right">
-                    <form name="contact" method="post" data-netlify="true" netlify>                  
+                <form name="contact" method="post" data-netlify="true" data-netlify-recaptcha="true" netlify>                  
                     <div class="form-group"> 
                         <label for="inputName">Name</label>
                         <input type="text" class="form-control" name="inputName" id="inputName" placeholder="Enter your name">
@@ -51,7 +51,7 @@
                           <option>Handrail</option>
                         </select>
                       </div>
-                    
+                    <div data-netlify-recaptcha="true"></div>
                     <button type="submit" class="btn btn-prime">Submit</button>
                     <a href="./index.html" class="btn btn-lite">Home</a>
                 </form>
