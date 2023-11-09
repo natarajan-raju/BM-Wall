@@ -1,20 +1,23 @@
 .btn {
     padding: 10px 5px;
     width: 60%;
+    margin-bottom: 2rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     line-height: 3rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
+
+
 .container {
-    padding: 2px 2px;
+    padding: 0.5px 0.5px;
 }
 
 section {
-    padding: 0.75rem;
+    padding: 0.1rem;
 }
 
 
@@ -71,16 +74,12 @@ p {
     background-color: var(--light-bg);
 }
 
-.mobile-svg {
-    display: block;
-   
-}
 
 
 /* Hero section */
 
 .hero {
-    padding: 1rem;
+    padding: 0.25rem;
 }
 
 .hero-container {
@@ -94,13 +93,13 @@ p {
 
 .hero-container h4 {
     font-size: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-container .hero-text {
     text-align: center;
     width: 100%;
-    margin-top: 75px;    
+    margin-top: 3rem;    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,11 +108,6 @@ p {
 
 
 
-.hero {
-    height: 50%;
-
-}
-
 .hero-container .image-container {
     width: 100%;
 }
@@ -121,7 +115,7 @@ p {
 
 #main #about {
     padding-top: 1rem;
-    height: auto;
+    min-height: 100vh;
 }
 
 #main #about .right{
@@ -130,14 +124,14 @@ p {
 #main #about .container {
     flex-direction: column;
     justify-content: space-around;
-
+ 
 
 }
 
 #main #about .container .about{
     width: 100%;
-    height: 50%;
     text-align: center;
+    padding: 0.5rem;
 }
 
 #main #about .container .about video {
